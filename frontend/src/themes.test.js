@@ -51,8 +51,8 @@ describe('system theme & dynamic OS resolution', () => {
     assert.equal(THEMES.system.label, 'System');
   });
 
-  it('getInitialTheme defaults to system', () => {
-    assert.equal(getInitialTheme(), 'system');
+  it('getInitialTheme defaults to the KhulaMail GTD theme', () => {
+    assert.equal(getInitialTheme(), 'gtd');
   });
 
   it('resolveEffectiveTheme returns the explicit theme name for non-system themes', () => {

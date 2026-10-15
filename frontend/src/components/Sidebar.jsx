@@ -857,7 +857,7 @@ export default function Sidebar() {
                 color: 'var(--text-primary)',
                 letterSpacing: '-0.02em', whiteSpace: 'nowrap',
               }}>
-                Mail
+                Khula
               </span>
               <span style={{
                 fontFamily: "'Syne', sans-serif",
@@ -865,7 +865,7 @@ export default function Sidebar() {
                 color: 'var(--accent)',
                 letterSpacing: '-0.02em', whiteSpace: 'nowrap',
               }}>
-                Flow
+                Node
               </span>
             </span>
           </div>

@@ -10,6 +10,7 @@ import { spamApi } from '../utils/spamApi.js';
 import { copyToClipboard } from '../utils/clipboard.js';
 import { isValidFromValue } from '../utils/defaultSender.js';
 import { autoRecipientFields } from '../utils/autoRecipients.js';
+import { FOUNDERMAIL_PRESET } from '../utils/foundermailPreset.js';
 import {
   AI_ACCOUNT_PROVIDER_OPTIONS,
   AI_CONNECTION_METHOD_ACCOUNT,
@@ -72,6 +73,7 @@ const COLORS = [
 
 // ─── IMAP presets ─────────────────────────────────────────────────────────────
 const PRESETS = {
+  foundermail: { label: 'Foundermail', ...FOUNDERMAIL_PRESET },
   gmail:   { label: 'Gmail',   imap_host: 'imap.gmail.com',        imap_port: 993, smtp_host: 'smtp.gmail.com',        smtp_port: 587 },
   yahoo:   { label: 'Yahoo',   imap_host: 'imap.mail.yahoo.com',   imap_port: 993, smtp_host: 'smtp.mail.yahoo.com',   smtp_port: 587 },
   icloud:  { label: 'iCloud',  imap_host: 'imap.mail.me.com',      imap_port: 993, smtp_host: 'smtp.mail.me.com',      smtp_port: 587 },
@@ -91,8 +93,7 @@ function AccountForm({ initial, onSave, onCancel }) {
   const isEdit = !!initial?.id;
   const [form, setForm] = useState(initial || {
     name: '', email_address: '', color: '#6366f1', protocol: 'imap',
-    imap_host: '', imap_port: 993, imap_skip_tls_verify: false,
-    smtp_host: '', smtp_port: 587, smtp_tls: 'STARTTLS',
+    ...FOUNDERMAIL_PRESET,
     smtp_auth_user: '', smtp_auth_pass: '',
     auth_user: '', auth_pass: '', categorization_enabled: false, antispam_enabled: false,
     trusted_authserv_id: '',
@@ -105,7 +106,7 @@ function AccountForm({ initial, onSave, onCancel }) {
   const [detectedAuthservIds, setDetectedAuthservIds] = useState(null);
   const [showPass, setShowPass] = useState(false);
   const [showSmtpPass, setShowSmtpPass] = useState(false);
-  const [selectedPreset, setSelectedPreset] = useState(null);
+  const [selectedPreset, setSelectedPreset] = useState(isEdit ? null : 'foundermail');
   const [mailPolicy, setMailPolicy] = useState({ allowPrivateHosts: false, allowInsecureTls: false, allowNonstandardPorts: false });
 
   useEffect(() => {
@@ -167,7 +168,7 @@ function AccountForm({ initial, onSave, onCancel }) {
         <div style={{ display: 'flex', gap: 6, marginBottom: 18, flexWrap: 'wrap' }}>
           {Object.entries(PRESETS).map(([key]) => {
             const active = selectedPreset === key;
-            const presetLabel = key === 'gmail' ? t('admin.accounts.presetGmail') : key === 'yahoo' ? t('admin.accounts.presetYahoo') : key === 'icloud' ? t('admin.accounts.presetIcloud') : t('admin.accounts.presetCustom');
+            const presetLabel = key === 'foundermail' ? 'Foundermail' : key === 'gmail' ? t('admin.accounts.presetGmail') : key === 'yahoo' ? t('admin.accounts.presetYahoo') : key === 'icloud' ? t('admin.accounts.presetIcloud') : t('admin.accounts.presetCustom');
             return (
               <button key={key} onClick={() => handlePreset(key)} style={{
                 padding: '5px 12px', borderRadius: 20, fontSize: 12, fontWeight: 500,

@@ -1,3 +1,16 @@
+# KhulaMail
+
+KhulaNode's self-hosted webmail, based on [MailFlow](https://github.com/maathimself/mailflow).
+Includes KhulaNode branding, a Foundermail IMAP/SMTP preset, and light-background
+GTD styling matching the working local installation.
+
+- [Deploy with Dokploy](DOKPLOY.md) using `docker-compose.dokploy.yml`.
+- [Local installation notes](LOCAL-SETUP.md).
+- No credentials, mailbox data, or generated environment secrets are included.
+- Upstream licenses, credits, and Git history are retained below.
+
+---
+
 <p align="center">
   <img src="media/mailflow-logo.png" width="200" alt="MailFlow Logo">
 </p>

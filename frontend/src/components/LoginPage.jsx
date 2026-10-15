@@ -273,8 +273,8 @@ export default function LoginPage() {
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
             <LogoMark size={44} />
             <span style={{ display: 'flex', alignItems: 'baseline' }}>
-              <span style={{ fontFamily: "'Syne', sans-serif", fontSize: 30, fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '-0.03em' }}>Mail</span>
-              <span style={{ fontFamily: "'Syne', sans-serif", fontSize: 30, fontWeight: 600, color: 'var(--accent)', letterSpacing: '-0.03em' }}>Flow</span>
+              <span style={{ fontFamily: "'Syne', sans-serif", fontSize: 30, fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '-0.03em' }}>Khula</span>
+              <span style={{ fontFamily: "'Syne', sans-serif", fontSize: 30, fontWeight: 600, color: 'var(--accent)', letterSpacing: '-0.03em' }}>Node</span>
             </span>
           </div>
           <p style={{ color: 'var(--text-tertiary)', fontSize: 14, margin: 0 }}>{t('login.tagline')}</p>

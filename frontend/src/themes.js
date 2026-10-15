@@ -1,3 +1,5 @@
+import { KHULANODE_LOGO } from './utils/khulanodeBrand.js';
+
 export const THEMES = {
   system: {
     label: 'System',
@@ -76,8 +78,8 @@ export const THEMES = {
 
   gtd: {
     label: 'GTD',
-    description: 'Getting Things Done — dark, per-state accents',
-    preview: ['#0f0f11', '#161619', '#4A9EDD', '#e8e8ed'],
+    description: 'Getting Things Done — light surfaces, per-state accents',
+    preview: ['#ffffff', '#f7f8fa', '#4A9EDD', '#18212b'],
     vars: {
       '--bg-primary': '#0f0f11',
       '--bg-secondary': '#161619',
@@ -603,31 +605,7 @@ export const THEMES = {
 
 // ── Color helpers ────────────────────────────────────────────────────────────
 
-function hexToRgb(hex) {
-  return [
-    parseInt(hex.slice(1, 3), 16),
-    parseInt(hex.slice(3, 5), 16),
-    parseInt(hex.slice(5, 7), 16),
-  ];
-}
-
-function lighten(hex, t) {
-  return '#' + hexToRgb(hex)
-    .map(c => Math.min(255, Math.round(c + (255 - c) * t)).toString(16).padStart(2, '0'))
-    .join('');
-}
-
-function darken(hex, t) {
-  return '#' + hexToRgb(hex)
-    .map(c => Math.round(c * (1 - t)).toString(16).padStart(2, '0'))
-    .join('');
-}
-
-function buildFaviconSvg(accent, count = 0) {
-  const light = lighten(accent, 0.25);
-  const dark  = darken(accent, 0.30);
-  const [dr, dg, db] = hexToRgb(dark);
-
+export function buildFaviconSvg(count = 0) {
   let badge = '';
   if (count > 0) {
     const label = count > 99 ? '99+' : String(count);
@@ -641,27 +619,7 @@ function buildFaviconSvg(accent, count = 0) {
   }
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="${light}"/>
-      <stop offset="100%" stop-color="${dark}"/>
-    </linearGradient>
-    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.14)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
-    </linearGradient>
-    <clipPath id="ec">
-      <rect x="5" y="10.5" width="22" height="15" rx="2.5"/>
-    </clipPath>
-  </defs>
-  <rect width="32" height="32" rx="7.5" fill="url(#bg)"/>
-  <rect width="32" height="16" rx="7.5" fill="url(#shine)"/>
-  <rect x="5" y="11.5" width="22" height="15" rx="2.5" fill="rgba(0,0,0,0.18)"/>
-  <rect x="5" y="10.5" width="22" height="15" rx="2.5" fill="white"/>
-  <path d="M5,10.5 L16,20.5 L27,10.5 Z" fill="rgba(${dr},${dg},${db},0.10)" clip-path="url(#ec)"/>
-  <path d="M5,10.5 L16,20.5 L27,10.5" fill="none" stroke="rgba(${dr},${dg},${db},0.38)" stroke-width="1.4" stroke-linejoin="round" clip-path="url(#ec)"/>
-  <line x1="5" y1="25.5" x2="13" y2="20" stroke="rgba(${dr},${dg},${db},0.16)" stroke-width="1.1"/>
-  <line x1="27" y1="25.5" x2="19" y2="20" stroke="rgba(${dr},${dg},${db},0.16)" stroke-width="1.1"/>
+  <image href="${KHULANODE_LOGO}" width="32" height="32"/>
   ${badge}
 </svg>`;
 }
@@ -744,9 +702,9 @@ export function resolveEffectiveTheme(themeName) {
 }
 
 // The theme to use before any stored/server preference is known — i.e. on the
-// login screen and the very first visit. Honors the OS light/dark setting via 'system'.
+// login screen and the very first visit. KhulaMail defaults to its light-styled GTD.
 export function getInitialTheme() {
-  return 'system';
+  return 'gtd';
 }
 
 // ── Effective accent (theme value, or a custom-CSS override of --accent) ───────
@@ -843,7 +801,7 @@ let _badgeCount  = 0;
 let _renderSeq   = 0;
 let _appliedSeq  = 0;
 
-// Cached rasterization of the base favicon (envelope icon, no badge).
+// Cached rasterization of the base favicon (KhulaNode mark, no badge).
 // Once populated, badge updates are drawn synchronously with Canvas 2D —
 // no SVG → Image → onload round-trip needed.
 let _baseCanvas = null;
@@ -892,7 +850,7 @@ function _rasterise(svgStr, onCanvas) {
 
 function _warmBase(accent) {
   if (_baseCanvas && _baseAccent === accent) return;
-  _rasterise(buildFaviconSvg(accent, 0), (canvas) => {
+  _rasterise(buildFaviconSvg(0), (canvas) => {
     if (_baseCanvas && _baseAccent === accent) return; // lost the race
     _baseCanvas = canvas;
     _baseAccent = accent;
@@ -906,7 +864,7 @@ function _applyFavicon(accent) {
   // on-disk file after tab focus changes.
   const isBase = _badgeCount === 0; // capture before any async gap
   const seq    = ++_renderSeq;
-  _rasterise(buildFaviconSvg(accent, _badgeCount), (canvas) => {
+  _rasterise(buildFaviconSvg(_badgeCount), (canvas) => {
     // Cache the no-badge render as the base so all future badge updates can
     // skip the async round-trip and draw synchronously via Canvas 2D.
     // Do this before the seq guard so the cache is always populated, even
