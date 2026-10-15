@@ -3,6 +3,12 @@
 Open http://localhost:3022 and register your local MailFlow login. The first user
 becomes the admin and open registration then closes automatically.
 
+The local checkout is `~/KhulaNode/KhulaMail`. Its private `.env` pins
+`COMPOSE_PROJECT_NAME=mailflow` so the renamed directory continues to use the
+existing `mailflow_*` Docker data volumes. Do not remove that setting when using
+this machine's existing data. New installations do not need to reuse that project
+name. This setting is local only and does not change the Dokploy project.
+
 In Settings → Accounts → Add Account, Foundermail is selected by default:
 
 - IMAP: `imap.foundermail.mx`, port `993` (implicit TLS).
