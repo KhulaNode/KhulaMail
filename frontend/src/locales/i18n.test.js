@@ -678,6 +678,8 @@ const HARDCODED_OK = new Set([
   'Emoji',
   // "MailFlow" brand name split into two spans for typography styling
   'Mail', 'Flow',
+  // KhulaNode brand spelling and split wordmark are intentionally not translated.
+  'Khula', 'Node', 'KhulaNode',
   // Email header labels inside the handlePrint() HTML template literal —
   // translating them requires passing t() results into the template string
   'From:', 'Date:',
