@@ -678,6 +678,8 @@ const HARDCODED_OK = new Set([
   'Emoji',
   // "MailFlow" brand name split into two spans for typography styling
   'Mail', 'Flow',
+  // AutoLex product names are brand names in every language.
+  'AutoLex', 'AutoLex Mail',
   // KhulaNode brand spelling and split wordmark are intentionally not translated.
   'Khula', 'Node', 'KhulaNode',
   // Email header labels inside the handlePrint() HTML template literal —

@@ -1,4 +1,4 @@
-/* KhulaMail: the saved local GTD light-background override. */
+/* AutoLex default light theme over MailFlow's GTD tokens. */
 :root[data-mailflow-theme="gtd"] {
   color-scheme: light;
 
@@ -11,9 +11,12 @@
   --border: #d4dae3;
   --border-subtle: #e6eaf0;
 
-  --text-primary: #18212b;
+  --text-primary: #081c38;
   --text-secondary: #4b5563;
   --text-tertiary: #687586;
 
-  --accent-dim: #e3f0fa;
+  --accent: #143eac;
+  --accent-hover: #0e318c;
+  --accent-dim: #e7edfb;
+  --accent-text: #ffffff;
 }

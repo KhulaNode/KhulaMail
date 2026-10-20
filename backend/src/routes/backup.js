@@ -22,7 +22,7 @@ const fromAnotherSite = req => ['cross-site', 'same-site'].includes(req.get('Sec
 // Asked before the download starts, so a problem shows on the page instead of as a failed
 // download in the browser.
 router.get('/check', async (req, res) => {
-  if (restoring) return res.status(409).json({ error: 'A restore is running. Try again when MailFlow is back.' });
+  if (restoring) return res.status(409).json({ error: 'A restore is running. Try again when AutoLex is back.' });
   const unclassified = await unclassifiedTables({ query });
   if (unclassified.length) return res.status(500).json({ error: `Tables not classified for backup: ${unclassified.join(', ')}` });
   res.json({ ok: true });
@@ -31,8 +31,8 @@ router.get('/check', async (req, res) => {
 router.get('/', async (req, res) => {
   const scope = req.query.scope ?? 'setup';
   if (!BACKUP_SCOPES.includes(scope)) return res.status(400).json({ error: 'scope must be "setup" or "full"' });
-  if (fromAnotherSite(req)) return res.status(403).json({ error: 'Start a backup from MailFlow settings.' });
-  if (restoring) return res.status(409).json({ error: 'A restore is running. Try again when MailFlow is back.' });
+  if (fromAnotherSite(req)) return res.status(403).json({ error: 'Start a backup from AutoLex settings.' });
+  if (restoring) return res.status(409).json({ error: 'A restore is running. Try again when AutoLex is back.' });
 
   downloads++;
   let client = null;
@@ -71,7 +71,7 @@ async function discardBody(req) {
 
 function restoreErrorMessage(err) {
   if (err instanceof BackupFileError) return err.message;
-  if (err.code === '55P03') return 'Another connection kept MailFlow’s tables busy for 30 seconds. Nothing was changed; try again.';
+  if (err.code === '55P03') return 'Another connection kept AutoLex’s tables busy for 30 seconds. Nothing was changed; try again.';
   return err.message;
 }
 
@@ -102,7 +102,7 @@ router.post('/restore', async (req, res) => {
       beforeWrite: async () => {
         // The file has passed its checks: from here on the outcome is reported inside a
         // streamed reply, one progress line per batch, so a slow restore keeps the
-        // connection alive through any proxy in front of MailFlow.
+        // connection alive through any proxy in front of AutoLex.
         started = true;
         res.status(200);
         res.setHeader('Content-Type', 'application/x-ndjson');

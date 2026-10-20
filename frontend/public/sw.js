@@ -25,7 +25,7 @@ self.addEventListener('push', (event) => {
   }
 
   const {
-    title       = 'MailFlow',
+    title       = 'AutoLex Mail',
     body        = 'New message',
     icon        = '/icon-512.png',
     badge       = '/badge-96.png',

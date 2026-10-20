@@ -1,25 +1,25 @@
-import { KHULANODE_LOGO } from './utils/khulanodeBrand.js';
+import { AUTOLEX_MARK } from './utils/autolexBrand.js';
 
 export const THEMES = {
   system: {
     label: 'System',
     description: 'Match OS light/dark setting',
-    preview: ['#0f0f11', '#f0f0f5', '#7c6af7', '#6366f1'],
+    preview: ['#081c38', '#f0f0f5', '#ffd21c', '#143eac'],
     vars: {
-      '--bg-primary': '#0f0f11',
-      '--bg-secondary': '#161619',
-      '--bg-tertiary': '#1e1e23',
-      '--bg-elevated': '#242429',
-      '--bg-hover': '#2a2a30',
-      '--border': '#2e2e35',
-      '--border-subtle': '#232328',
-      '--text-primary': '#e8e8ed',
-      '--text-secondary': '#9898a8',
-      '--text-tertiary': '#5a5a6a',
-      '--accent': '#7c6af7',
-      '--accent-text': '#ffffff',
-      '--accent-dim': '#3d3569',
-      '--accent-glow': 'rgba(124,106,247,0.15)',
+      '--bg-primary': '#081c38',
+      '--bg-secondary': '#0e2749',
+      '--bg-tertiary': '#143158',
+      '--bg-elevated': '#183963',
+      '--bg-hover': '#1d406b',
+      '--border': '#345070',
+      '--border-subtle': '#234263',
+      '--text-primary': '#f2f5fc',
+      '--text-secondary': '#becbe0',
+      '--text-tertiary': '#a5b7d0',
+      '--accent': '#ffd21c',
+      '--accent-text': '#081c38',
+      '--accent-dim': '#514923',
+      '--accent-glow': 'rgba(255,210,28,0.15)',
       '--green': '#4ade80',
       '--red': '#f87171',
       '--amber': '#fbbf24',
@@ -28,23 +28,23 @@ export const THEMES = {
 
   dark: {
     label: 'Dark',
-    description: 'Default dark theme',
-    preview: ['#0f0f11', '#161619', '#7c6af7', '#e8e8ed'],
+    description: 'AutoLex dark theme',
+    preview: ['#081c38', '#0e2749', '#ffd21c', '#e8e8ed'],
     vars: {
-      '--bg-primary': '#0f0f11',
-      '--bg-secondary': '#161619',
-      '--bg-tertiary': '#1e1e23',
-      '--bg-elevated': '#242429',
-      '--bg-hover': '#2a2a30',
-      '--border': '#2e2e35',
-      '--border-subtle': '#232328',
-      '--text-primary': '#e8e8ed',
-      '--text-secondary': '#9898a8',
-      '--text-tertiary': '#5a5a6a',
-      '--accent': '#7c6af7',
-      '--accent-text': '#ffffff',
-      '--accent-dim': '#3d3569',
-      '--accent-glow': 'rgba(124,106,247,0.15)',
+      '--bg-primary': '#081c38',
+      '--bg-secondary': '#0e2749',
+      '--bg-tertiary': '#143158',
+      '--bg-elevated': '#183963',
+      '--bg-hover': '#1d406b',
+      '--border': '#345070',
+      '--border-subtle': '#234263',
+      '--text-primary': '#f2f5fc',
+      '--text-secondary': '#becbe0',
+      '--text-tertiary': '#a5b7d0',
+      '--accent': '#ffd21c',
+      '--accent-text': '#081c38',
+      '--accent-dim': '#514923',
+      '--accent-glow': 'rgba(255,210,28,0.15)',
       '--green': '#4ade80',
       '--red': '#f87171',
       '--amber': '#fbbf24',
@@ -54,7 +54,7 @@ export const THEMES = {
   light: {
     label: 'Light',
     description: 'Clean light theme',
-    preview: ['#f8f8fc', '#ffffff', '#6366f1', '#1a1a2e'],
+    preview: ['#f8f8fc', '#ffffff', '#143eac', '#081c38'],
     vars: {
       '--bg-primary': '#f0f0f5',
       '--bg-secondary': '#ffffff',
@@ -63,13 +63,13 @@ export const THEMES = {
       '--bg-hover': '#ebebf5',
       '--border': '#d8d8e8',
       '--border-subtle': '#e8e8f0',
-      '--text-primary': '#1a1a2e',
+      '--text-primary': '#081c38',
       '--text-secondary': '#4a4a6a',
       '--text-tertiary': '#8888aa',
-      '--accent': '#6366f1',
+      '--accent': '#143eac',
       '--accent-text': '#ffffff',
-      '--accent-dim': '#e0e0ff',
-      '--accent-glow': 'rgba(99,102,241,0.12)',
+      '--accent-dim': '#e7edfb',
+      '--accent-glow': 'rgba(20,62,172,0.12)',
       '--green': '#16a34a',
       '--red': '#dc2626',
       '--amber': '#d97706',
@@ -78,23 +78,23 @@ export const THEMES = {
 
   gtd: {
     label: 'GTD',
-    description: 'Getting Things Done — light surfaces, per-state accents',
-    preview: ['#ffffff', '#f7f8fa', '#4A9EDD', '#18212b'],
+    description: 'Getting Things Done — AutoLex light surfaces',
+    preview: ['#ffffff', '#f7f8fa', '#143eac', '#081c38'],
     vars: {
-      '--bg-primary': '#0f0f11',
-      '--bg-secondary': '#161619',
-      '--bg-tertiary': '#1e1e23',
-      '--bg-elevated': '#242429',
-      '--bg-hover': '#2a2a30',
-      '--border': '#2e2e35',
-      '--border-subtle': '#232328',
-      '--text-primary': '#e8e8ed',
-      '--text-secondary': '#9898a8',
-      '--text-tertiary': '#5a5a6a',
-      '--accent': '#4A9EDD',
+      '--bg-primary': '#ffffff',
+      '--bg-secondary': '#f7f8fa',
+      '--bg-tertiary': '#eef1f5',
+      '--bg-elevated': '#ffffff',
+      '--bg-hover': '#e8edf3',
+      '--border': '#d4dae3',
+      '--border-subtle': '#e6eaf0',
+      '--text-primary': '#081c38',
+      '--text-secondary': '#4b5563',
+      '--text-tertiary': '#687586',
+      '--accent': '#143eac',
       '--accent-text': '#ffffff',
-      '--accent-dim': '#10293f',
-      '--accent-glow': 'rgba(74,158,221,0.15)',
+      '--accent-dim': '#e7edfb',
+      '--accent-glow': 'rgba(20,62,172,0.15)',
       '--green': '#2FBD85',
       '--red': '#E56A6A',
       '--amber': '#D9B430',
@@ -619,7 +619,7 @@ export function buildFaviconSvg(count = 0) {
   }
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <image href="${KHULANODE_LOGO}" width="32" height="32"/>
+  <image href="${AUTOLEX_MARK}" width="32" height="32"/>
   ${badge}
 </svg>`;
 }
@@ -702,7 +702,7 @@ export function resolveEffectiveTheme(themeName) {
 }
 
 // The theme to use before any stored/server preference is known — i.e. on the
-// login screen and the very first visit. KhulaMail defaults to its light-styled GTD.
+// login screen and the very first visit. AutoLex defaults to its light-styled GTD.
 export function getInitialTheme() {
   return 'gtd';
 }
@@ -801,7 +801,7 @@ let _badgeCount  = 0;
 let _renderSeq   = 0;
 let _appliedSeq  = 0;
 
-// Cached rasterization of the base favicon (KhulaNode mark, no badge).
+// Cached rasterization of the base favicon (AutoLex mark, no badge).
 // Once populated, badge updates are drawn synchronously with Canvas 2D —
 // no SVG → Image → onload round-trip needed.
 let _baseCanvas = null;

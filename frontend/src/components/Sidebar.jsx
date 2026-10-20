@@ -857,15 +857,7 @@ export default function Sidebar() {
                 color: 'var(--text-primary)',
                 letterSpacing: '-0.02em', whiteSpace: 'nowrap',
               }}>
-                Khula
-              </span>
-              <span style={{
-                fontFamily: "'Syne', sans-serif",
-                fontSize: 17, fontWeight: 600,
-                color: 'var(--accent)',
-                letterSpacing: '-0.02em', whiteSpace: 'nowrap',
-              }}>
-                Node
+                AutoLex
               </span>
             </span>
           </div>
