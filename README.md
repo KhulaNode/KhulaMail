@@ -1,10 +1,10 @@
-# B2SA Mail
+# LSTA Mail
 
-Back2School Africa's webmail edition of KhulaMail, based on
-[MailFlow](https://github.com/maathimself/mailflow). It includes the B2SA logos,
-green and gold palette, and client-facing mail identity.
+Limpopo Scholar Transport Alliance's webmail edition of KhulaMail, based on
+[MailFlow](https://github.com/maathimself/mailflow). It uses the supplied LSTA
+emblem, a copper and warm-neutral palette, and client-facing mail identity.
 
-- [B2SA branding and mail setup](docs/B2SA.md).
+- [LSTA branding and mail setup](docs/LSTA.md).
 
 - [Deploy with Dokploy](DOKPLOY.md) using `docker-compose.dokploy.yml`.
 - [Local installation notes](LOCAL-SETUP.md).

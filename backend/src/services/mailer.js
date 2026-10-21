@@ -24,6 +24,6 @@ export async function sendSystemEmail({ to, subject, text, html }) {
     auth: { user: cfg.user, pass },
     tls,
   });
-  const from = `${cfg.fromName || 'B2SA Mail'} <${cfg.fromEmail || cfg.user}>`;
+  const from = `${cfg.fromName || 'LSTA Mail'} <${cfg.fromEmail || cfg.user}>`;
   await transport.sendMail({ from, to, subject, text, html });
 }

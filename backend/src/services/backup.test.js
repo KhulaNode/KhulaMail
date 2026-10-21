@@ -374,22 +374,22 @@ describe('restoreBackup', () => {
 
   it.each([
     ['a file that is not gzip', () => Readable.from([Buffer.from('plain text')]), /could not be read/],
-    ['a gzip that is not JSON lines', () => file(['not json']), /not a B2SA Mail backup/],
+    ['a gzip that is not JSON lines', () => file(['not json']), /not a LSTA Mail backup/],
     ['an empty file', () => file([]), /empty/],
     ['a newer file format', () => file([manifest({ format: BACKUP_FORMAT + 1 })]), /newer version/],
     // Format 1 carried json and jsonb parsed, where a JSON null had already become SQL NULL.
     ['the first file format', () => file([manifest({ format: 1 })]), /earlier file format/],
-    ['a newer schema', () => file([manifest({ schemaVersion: '0999_future' })]), /newer version of B2SA Mail \(3\.6\.0\)\. Update B2SA Mail/],
+    ['a newer schema', () => file([manifest({ schemaVersion: '0999_future' })]), /newer version of LSTA Mail \(3\.6\.0\)\. Update LSTA Mail/],
     // An update converts existing data as it migrates, so an older backup belongs on its own version.
-    ['an older schema', () => file([manifest({ schemaVersion: '0040_older' })]), /older version of B2SA Mail \(3\.6\.0\)\. Restore it on that version, then update/],
-    ['an older schema from an unnamed version', () => file([manifest({ schemaVersion: '0040_older', app: '<b>odd</b>' })]), /older version of B2SA Mail\. Restore/],
+    ['an older schema', () => file([manifest({ schemaVersion: '0040_older' })]), /older version of LSTA Mail \(3\.6\.0\)\. Restore it on that version, then update/],
+    ['an older schema from an unnamed version', () => file([manifest({ schemaVersion: '0040_older', app: '<b>odd</b>' })]), /older version of LSTA Mail\. Restore/],
     ['a different ENCRYPTION_KEY', () => file([manifest({ keyCheck: 'enc:something-else' })]), /different ENCRYPTION_KEY/],
     ['a key check that was never encrypted', () => file([manifest({ keyCheck: 'mailflow-backup-key-check' })]), /different ENCRYPTION_KEY/],
-    ['a manifest without a key check', () => file([manifest({ keyCheck: undefined })]), /not a B2SA Mail backup/],
-    ['malformed sequence positions', () => file([manifest({ sequences: { folder_status_revision: 'abc' } })]), /not a B2SA Mail backup/],
+    ['a manifest without a key check', () => file([manifest({ keyCheck: undefined })]), /not a LSTA Mail backup/],
+    ['malformed sequence positions', () => file([manifest({ sequences: { folder_status_revision: 'abc' } })]), /not a LSTA Mail backup/],
     ['a table this installation does not have', () => file([manifest({ tables: ['users', 'old_table'] })]), /does not have: old_table/],
     ['a table that is never restored', () => file([manifest({ tables: ['schema_migrations'] })]), /does not have: schema_migrations/],
-    ['a manifest without a table list', () => file([manifest({ tables: 'users' })]), /not a B2SA Mail backup/],
+    ['a manifest without a table list', () => file([manifest({ tables: 'users' })]), /not a LSTA Mail backup/],
   ])('rejects %s before touching the database', async (_label, input, message) => {
     const client = restoreClient();
     const beforeWrite = vi.fn();

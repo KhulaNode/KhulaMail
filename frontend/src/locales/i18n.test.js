@@ -678,8 +678,8 @@ const HARDCODED_OK = new Set([
   'Emoji',
   // "MailFlow" brand name split into two spans for typography styling
   'Mail', 'Flow',
-  // B2SA Mail product names are brand names in every language.
-  'B2SA Mail', 'B2SA', 'Back2School Africa',
+  // LSTA Mail product names are brand names in every language.
+  'LSTA Mail', 'LSTA', 'Limpopo Scholar Transport Alliance',
   // KhulaNode brand spelling and split wordmark are intentionally not translated.
   'Khula', 'Node', 'KhulaNode',
   // Email header labels inside the handlePrint() HTML template literal —

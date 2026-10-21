@@ -1,25 +1,23 @@
-import { B2SA_MARK } from './utils/b2saBrand.js';
-
 export const THEMES = {
   system: {
     label: 'System',
     description: 'Match OS light/dark setting',
-    preview: ['#003b26', '#f2f7f1', '#f6bb18', '#00663d'],
+    preview: ['#17130f', '#f8f4ed', '#d6a06a', '#86521f'],
     vars: {
-      '--bg-primary': '#003b26',
-      '--bg-secondary': '#06472e',
-      '--bg-tertiary': '#0b5236',
-      '--bg-elevated': '#105c3d',
-      '--bg-hover': '#176646',
-      '--border': '#3b7158',
-      '--border-subtle': '#225c42',
-      '--text-primary': '#f4faf5',
-      '--text-secondary': '#c5dec9',
-      '--text-tertiary': '#a8c9b0',
-      '--accent': '#f6bb18',
-      '--accent-text': '#003b26',
-      '--accent-dim': '#594c19',
-      '--accent-glow': 'rgba(246,187,24,0.15)',
+      '--bg-primary': '#17130f',
+      '--bg-secondary': '#211b15',
+      '--bg-tertiary': '#2c231b',
+      '--bg-elevated': '#36291e',
+      '--bg-hover': '#423123',
+      '--border': '#624b37',
+      '--border-subtle': '#4a3829',
+      '--text-primary': '#fcf8f2',
+      '--text-secondary': '#e3d3c1',
+      '--text-tertiary': '#c4ae96',
+      '--accent': '#d6a06a',
+      '--accent-text': '#17130f',
+      '--accent-dim': '#55412d',
+      '--accent-glow': 'rgba(214,160,106,0.15)',
       '--green': '#4ade80',
       '--red': '#f87171',
       '--amber': '#fbbf24',
@@ -28,23 +26,23 @@ export const THEMES = {
 
   dark: {
     label: 'Dark',
-    description: 'B2SA Mail dark theme',
-    preview: ['#003b26', '#06472e', '#f6bb18', '#e8e8ed'],
+    description: 'LSTA Mail dark theme',
+    preview: ['#17130f', '#211b15', '#d6a06a', '#e8e8ed'],
     vars: {
-      '--bg-primary': '#003b26',
-      '--bg-secondary': '#06472e',
-      '--bg-tertiary': '#0b5236',
-      '--bg-elevated': '#105c3d',
-      '--bg-hover': '#176646',
-      '--border': '#3b7158',
-      '--border-subtle': '#225c42',
-      '--text-primary': '#f4faf5',
-      '--text-secondary': '#c5dec9',
-      '--text-tertiary': '#a8c9b0',
-      '--accent': '#f6bb18',
-      '--accent-text': '#003b26',
-      '--accent-dim': '#594c19',
-      '--accent-glow': 'rgba(246,187,24,0.15)',
+      '--bg-primary': '#17130f',
+      '--bg-secondary': '#211b15',
+      '--bg-tertiary': '#2c231b',
+      '--bg-elevated': '#36291e',
+      '--bg-hover': '#423123',
+      '--border': '#624b37',
+      '--border-subtle': '#4a3829',
+      '--text-primary': '#fcf8f2',
+      '--text-secondary': '#e3d3c1',
+      '--text-tertiary': '#c4ae96',
+      '--accent': '#d6a06a',
+      '--accent-text': '#17130f',
+      '--accent-dim': '#55412d',
+      '--accent-glow': 'rgba(214,160,106,0.15)',
       '--green': '#4ade80',
       '--red': '#f87171',
       '--amber': '#fbbf24',
@@ -54,22 +52,22 @@ export const THEMES = {
   light: {
     label: 'Light',
     description: 'Clean light theme',
-    preview: ['#f2f7f1', '#ffffff', '#00663d', '#003b26'],
+    preview: ['#f8f4ed', '#ffffff', '#86521f', '#17130f'],
     vars: {
-      '--bg-primary': '#f2f7f1',
+      '--bg-primary': '#f8f4ed',
       '--bg-secondary': '#ffffff',
-      '--bg-tertiary': '#f6f9f4',
+      '--bg-tertiary': '#f4ede3',
       '--bg-elevated': '#ffffff',
-      '--bg-hover': '#e9f2e8',
-      '--border': '#cedfd1',
-      '--border-subtle': '#e3eee5',
-      '--text-primary': '#003b26',
-      '--text-secondary': '#416452',
-      '--text-tertiary': '#647e6d',
-      '--accent': '#00663d',
+      '--bg-hover': '#eee3d5',
+      '--border': '#dfd0be',
+      '--border-subtle': '#eae0d4',
+      '--text-primary': '#17130f',
+      '--text-secondary': '#5e5143',
+      '--text-tertiary': '#776758',
+      '--accent': '#86521f',
       '--accent-text': '#ffffff',
-      '--accent-dim': '#e3f3e8',
-      '--accent-glow': 'rgba(0,102,61,0.12)',
+      '--accent-dim': '#f2e7d8',
+      '--accent-glow': 'rgba(134,82,31,0.12)',
       '--green': '#16a34a',
       '--red': '#dc2626',
       '--amber': '#d97706',
@@ -78,23 +76,23 @@ export const THEMES = {
 
   gtd: {
     label: 'GTD',
-    description: 'Getting Things Done — B2SA Mail light surfaces',
-    preview: ['#ffffff', '#f5f8f3', '#00663d', '#003b26'],
+    description: 'Getting Things Done — LSTA Mail light surfaces',
+    preview: ['#ffffff', '#f8f3ec', '#86521f', '#17130f'],
     vars: {
       '--bg-primary': '#ffffff',
-      '--bg-secondary': '#f5f8f3',
-      '--bg-tertiary': '#eaf2e9',
+      '--bg-secondary': '#f8f3ec',
+      '--bg-tertiary': '#f1e8dd',
       '--bg-elevated': '#ffffff',
-      '--bg-hover': '#e1efe3',
-      '--border': '#cbddce',
-      '--border-subtle': '#e0ebe1',
-      '--text-primary': '#003b26',
-      '--text-secondary': '#456251',
-      '--text-tertiary': '#627c6b',
-      '--accent': '#00663d',
+      '--bg-hover': '#ebddcd',
+      '--border': '#dccab4',
+      '--border-subtle': '#eadfcf',
+      '--text-primary': '#17130f',
+      '--text-secondary': '#5e5143',
+      '--text-tertiary': '#786b5d',
+      '--accent': '#86521f',
       '--accent-text': '#ffffff',
-      '--accent-dim': '#e3f3e8',
-      '--accent-glow': 'rgba(0,102,61,0.15)',
+      '--accent-dim': '#f2e7d8',
+      '--accent-glow': 'rgba(134,82,31,0.15)',
       '--green': '#2FBD85',
       '--red': '#E56A6A',
       '--amber': '#D9B430',
@@ -603,27 +601,6 @@ export const THEMES = {
   },
 };
 
-// ── Color helpers ────────────────────────────────────────────────────────────
-
-export function buildFaviconSvg(count = 0) {
-  let badge = '';
-  if (count > 0) {
-    const label = count > 99 ? '99+' : String(count);
-    const r  = label.length > 2 ? 10 : 11;
-    const cx = 32 - r;
-    const cy = r;
-    const fs = label.length > 2 ? 8 : label.length > 1 ? 12 : 14;
-    badge = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="#ef4444" stroke="white" stroke-width="1.5"/>` +
-            `<text x="${cx}" y="${cy}" text-anchor="middle" dominant-baseline="central" ` +
-            `fill="white" font-family="system-ui,sans-serif" font-weight="800" font-size="${fs}">${label}</text>`;
-  }
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <image href="${B2SA_MARK}" width="32" height="32"/>
-  ${badge}
-</svg>`;
-}
-
 // ── Sender avatar color ───────────────────────────────────────────────────────
 
 const SENDER_PALETTE = [
@@ -702,7 +679,7 @@ export function resolveEffectiveTheme(themeName) {
 }
 
 // The theme to use before any stored/server preference is known — i.e. on the
-// login screen and the very first visit. B2SA Mail defaults to its light-styled GTD.
+// login screen and the very first visit. LSTA Mail defaults to its light-styled GTD.
 export function getInitialTheme() {
   return 'gtd';
 }
@@ -801,7 +778,7 @@ let _badgeCount  = 0;
 let _renderSeq   = 0;
 let _appliedSeq  = 0;
 
-// Cached rasterization of the base favicon (B2SA mark, no badge).
+// Cached rasterization of the base favicon (LSTA mark, no badge).
 // Once populated, badge updates are drawn synchronously with Canvas 2D —
 // no SVG → Image → onload round-trip needed.
 let _baseCanvas = null;
@@ -832,25 +809,45 @@ function _setFaviconLink(dataUri) {
   _faviconLink.href = dataUri;
 }
 
-function _rasterise(svgStr, onCanvas) {
-  const blob = new Blob([svgStr], { type: 'image/svg+xml' });
-  const url  = URL.createObjectURL(blob);
+function _drawBadge(ctx, count) {
+  if (count <= 0) return;
+  const label = count > 99 ? '99+' : String(count);
+  const r = label.length > 2 ? 10 : 11;
+  const cx = FAVICON_PX - r;
+  const cy = r;
+  const fs = label.length > 2 ? 8 : label.length > 1 ? 12 : 14;
+  ctx.beginPath();
+  ctx.arc(cx, cy, r + 1.5, 0, 2 * Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(cx, cy, r, 0, 2 * Math.PI);
+  ctx.fillStyle = '#ef4444';
+  ctx.fill();
+  ctx.fillStyle = 'white';
+  ctx.font = `800 ${fs}px system-ui,sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(label, cx, cy + 0.5);
+}
+
+function _rasterise(count, onCanvas) {
   const img  = new Image(FAVICON_PX, FAVICON_PX);
   img.onload = () => {
-    URL.revokeObjectURL(url);
     const canvas = document.createElement('canvas');
     canvas.width  = FAVICON_PX;
     canvas.height = FAVICON_PX;
-    canvas.getContext('2d').drawImage(img, 0, 0, FAVICON_PX, FAVICON_PX);
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0, FAVICON_PX, FAVICON_PX);
+    _drawBadge(ctx, count);
     onCanvas(canvas);
   };
-  img.onerror = () => URL.revokeObjectURL(url);
-  img.src = url;
+  img.src = '/lsta-icon-192.svg';
 }
 
 function _warmBase(accent) {
   if (_baseCanvas && _baseAccent === accent) return;
-  _rasterise(buildFaviconSvg(0), (canvas) => {
+  _rasterise(0, (canvas) => {
     if (_baseCanvas && _baseAccent === accent) return; // lost the race
     _baseCanvas = canvas;
     _baseAccent = accent;
@@ -858,13 +855,13 @@ function _warmBase(accent) {
 }
 
 function _applyFavicon(accent) {
-  // Rasterise the SVG to a canvas and export as PNG. PNG data URIs go through
+  // Rasterise the static LSTA icon to a canvas and export as PNG. PNG data URIs go through
   // the browser's image pipeline rather than the document pipeline, which avoids
   // the Chromium quirk where SVG favicons are silently reverted to the cached
   // on-disk file after tab focus changes.
   const isBase = _badgeCount === 0; // capture before any async gap
   const seq    = ++_renderSeq;
-  _rasterise(buildFaviconSvg(_badgeCount), (canvas) => {
+  _rasterise(_badgeCount, (canvas) => {
     // Cache the no-badge render as the base so all future badge updates can
     // skip the async round-trip and draw synchronously via Canvas 2D.
     // Do this before the seq guard so the cache is always populated, even
@@ -898,36 +895,14 @@ export function updateFaviconBadge(count) {
     const ctx = canvas.getContext('2d');
     ctx.drawImage(_baseCanvas, 0, 0);
 
-    if (count > 0) {
-      const label = count > 99 ? '99+' : String(count);
-      const r  = label.length > 2 ? 10 : 11;
-      const cx = FAVICON_PX - r;
-      const cy = r;
-      const fs = label.length > 2 ? 8 : label.length > 1 ? 12 : 14;
-      // White border (filled circle, slightly larger than the badge)
-      ctx.beginPath();
-      ctx.arc(cx, cy, r + 1.5, 0, 2 * Math.PI);
-      ctx.fillStyle = 'white';
-      ctx.fill();
-      // Red badge
-      ctx.beginPath();
-      ctx.arc(cx, cy, r, 0, 2 * Math.PI);
-      ctx.fillStyle = '#ef4444';
-      ctx.fill();
-      // White label
-      ctx.fillStyle = 'white';
-      ctx.font = `800 ${fs}px system-ui,sans-serif`;
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillText(label, cx, cy + 0.5);
-    }
+    _drawBadge(ctx, count);
 
     _setFaviconLink(canvas.toDataURL('image/png'));
     return;
   }
 
   // Slow path: base not cached yet (first render or theme change) — use async
-  // SVG rasterization. Also warm the base cache separately so the next badge
+  // image rasterization. Also warm the base cache separately so the next badge
   // update can use the fast synchronous path, even if _badgeCount > 0 now
   // (which would prevent _applyFavicon from auto-caching the base).
   _applyFavicon(accent);

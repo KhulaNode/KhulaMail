@@ -1,12 +1,16 @@
-// The circular B2SA mark stays legible in the narrow sidebar.
+// Crop the supplied LSTA artwork in CSS so the copper hand emblem stays legible
+// at sidebar size without altering the original image.
 export default function LogoMark({ size = 32 }) {
   return (
-    <img
-      src="/b2sa-mark.jpeg"
-      alt="B2SA"
-      width={size}
-      height={size}
-      style={{ display: 'block', objectFit: 'contain', flexShrink: 0, background: '#ffffff', borderRadius: 5, padding: 2, boxSizing: 'border-box' }}
-    />
+    <span role="img" aria-label="Limpopo Scholar Transport Alliance" style={{
+      display: 'block', width: size, height: size, position: 'relative',
+      overflow: 'hidden', flexShrink: 0, background: '#080808', borderRadius: 5,
+    }}>
+      <img src="/lsta-logo.png" alt="" aria-hidden="true" style={{
+        display: 'block', position: 'absolute', maxWidth: 'none',
+        width: size * 1536 / 672, height: size * 1024 / 672,
+        left: -size * 432 / 672, top: -size * 64 / 672,
+      }} />
+    </span>
   );
 }

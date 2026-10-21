@@ -857,7 +857,7 @@ export default function Sidebar() {
                 color: 'var(--text-primary)',
                 letterSpacing: '-0.02em', whiteSpace: 'nowrap',
               }}>
-                B2SA Mail
+                LSTA Mail
               </span>
             </span>
           </div>

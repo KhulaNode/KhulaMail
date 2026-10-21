@@ -270,7 +270,7 @@ describe('BackupSettings', () => {
     assert.ok(!host.textContent.includes('admin.backup.failed'));
   });
 
-  test('says so when B2SA Mail does not come back', async () => {
+  test('says so when LSTA Mail does not come back', async () => {
     await mount();
     await chooseFile();
     restoreResponse = () => stream([{ ok: true, scope: 'setup', tables: 1, rows: 1 }]);
@@ -305,7 +305,7 @@ describe('BackupSettings', () => {
   test('choosing another file after a failure clears the old message', async () => {
     await mount();
     await chooseFile();
-    restoreResponse = () => json({ error: 'This is not a B2SA Mail backup file.' }, 400);
+    restoreResponse = () => json({ error: 'This is not a LSTA Mail backup file.' }, 400);
     await confirmRestore();
     await until(() => host.textContent.includes('admin.backup.failed'), 'the failure');
     await chooseFile();

@@ -396,16 +396,16 @@ async function sendEmailOtpCode(userId, toEmail) {
 
   await sendSystemEmail({
     to: toEmail,
-    subject: 'Your B2SA Mail sign-in code',
+    subject: 'Your LSTA Mail sign-in code',
     text: `Your sign-in code is: ${code}\n\nThis code expires in 10 minutes.\n\nIf you did not request this code, you can ignore this email.`,
     html: `
       <div style="font-family:-apple-system,Arial,sans-serif;max-width:480px;margin:0 auto;padding:32px;color:#1a1a1a;">
         <div style="margin-bottom:24px;">
-          <span style="font-size:22px;font-weight:700;color:#1a1a1a;">B2SA Mail</span>
+          <span style="font-size:22px;font-weight:700;color:#1a1a1a;">LSTA Mail</span>
         </div>
         <h2 style="margin:0 0 12px;font-size:18px;font-weight:600;">Your sign-in code</h2>
-        <p style="color:#555;line-height:1.6;margin:0 0 24px;">Use the code below to sign in to B2SA Mail. It expires in 10 minutes.</p>
-        <div style="font-size:36px;font-weight:700;letter-spacing:0.2em;text-align:center;padding:20px;background:#e3f3e8;border-radius:8px;color:#00663d;margin-bottom:24px;">${code}</div>
+        <p style="color:#555;line-height:1.6;margin:0 0 24px;">Use the code below to sign in to LSTA Mail. It expires in 10 minutes.</p>
+        <div style="font-size:36px;font-weight:700;letter-spacing:0.2em;text-align:center;padding:20px;background:#f2e7d8;border-radius:8px;color:#86521f;margin-bottom:24px;">${code}</div>
         <p style="color:#999;font-size:12px;margin:0;">If you did not request this code, you can ignore this email.</p>
       </div>
     `,
@@ -509,7 +509,7 @@ router.get('/2fa/enrollment/setup', async (req, res) => {
   const username = userResult.rows[0]?.username || 'user';
 
   const secret = authenticator.generateSecret(20);
-  const otpauthUrl = authenticator.keyuri(username, 'B2SA Mail', secret);
+  const otpauthUrl = authenticator.keyuri(username, 'LSTA Mail', secret);
   const qrCode = await QRCode.toDataURL(otpauthUrl);
 
   req.session.pendingTOTPSecret = secret;
@@ -1042,16 +1042,16 @@ router.post('/forgot-password', authLimiter, async (req, res) => {
       // Send the email before persisting the token. If delivery fails, nothing is
       // saved and the user can retry cleanly.
       // Transport preference: system SMTP → account owner's first personal SMTP account.
-      const emailSubject = 'Reset your B2SA Mail password';
-      const emailText = `You requested a password reset for your B2SA Mail account.\n\nClick the link below to set a new password. This link expires in 1 hour.\n\n${resetUrl}\n\nIf you did not request this, you can ignore this email.`;
+      const emailSubject = 'Reset your LSTA Mail password';
+      const emailText = `You requested a password reset for your LSTA Mail account.\n\nClick the link below to set a new password. This link expires in 1 hour.\n\n${resetUrl}\n\nIf you did not request this, you can ignore this email.`;
       const emailHtml = `
         <div style="font-family:-apple-system,Arial,sans-serif;max-width:480px;margin:0 auto;padding:32px;color:#1a1a1a;">
           <div style="margin-bottom:24px;">
-            <span style="font-size:22px;font-weight:700;color:#1a1a1a;">B2SA Mail</span>
+            <span style="font-size:22px;font-weight:700;color:#1a1a1a;">LSTA Mail</span>
           </div>
           <h2 style="margin:0 0 12px;font-size:18px;font-weight:600;">Reset your password</h2>
           <p style="color:#555;line-height:1.6;margin:0 0 24px;">Click the button below to set a new password. This link expires in 1 hour.</p>
-          <a href="${resetUrl}" style="display:inline-block;padding:12px 24px;background:#00663d;color:white;border-radius:8px;text-decoration:none;font-weight:500;font-size:14px;margin-bottom:24px;">Reset password</a>
+          <a href="${resetUrl}" style="display:inline-block;padding:12px 24px;background:#86521f;color:white;border-radius:8px;text-decoration:none;font-weight:500;font-size:14px;margin-bottom:24px;">Reset password</a>
           <p style="color:#999;font-size:12px;margin:0;">If you did not request a password reset, you can ignore this email. Your password will not change.</p>
         </div>
       `;
@@ -1075,7 +1075,7 @@ router.post('/forgot-password', authLimiter, async (req, res) => {
               secure: (cfg.port || 587) === 465,
               auth: { user: cfg.user, pass }, tls: sysTls,
             });
-            fromHeader = `${cfg.fromName || 'B2SA Mail'} <${cfg.fromEmail || cfg.user}>`;
+            fromHeader = `${cfg.fromName || 'LSTA Mail'} <${cfg.fromEmail || cfg.user}>`;
           }
         }
       } catch { /* fall through to personal account */ }

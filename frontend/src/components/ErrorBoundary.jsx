@@ -58,7 +58,7 @@ export default class ErrorBoundary extends React.Component {
   handleCopy = () => {
     const { error } = this.state;
     const details = [
-      `B2SA Mail error: ${error?.message || String(error)}`,
+      `LSTA Mail error: ${error?.message || String(error)}`,
       `URL: ${window.location?.href || 'unknown'}`,
       `User agent: ${navigator?.userAgent || 'unknown'}`,
       error?.stack ? `\n${error.stack}` : '',
@@ -99,7 +99,7 @@ export default class ErrorBoundary extends React.Component {
       }}>
         <div style={{ maxWidth: 520, width: '100%' }}>
           <h1 style={{ fontSize: 20, fontWeight: 600, margin: '0 0 8px' }}>
-            {staleBuild ? 'B2SA Mail has been updated' : 'B2SA Mail hit an error and stopped'}
+            {staleBuild ? 'LSTA Mail has been updated' : 'LSTA Mail hit an error and stopped'}
           </h1>
           <p style={{ margin: '0 0 16px', fontSize: 14, lineHeight: 1.6, color: 'var(--text-secondary, #555)' }}>
             {staleBuild === 'reloading' && 'Loading the new version…'}

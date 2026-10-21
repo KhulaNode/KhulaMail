@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useStore } from '../store/index.js';
 import { api } from '../utils/api.js';
 import PasswordInput from './PasswordInput.jsx';
+import LogoMark from './LogoMark.jsx';
 
 export default function LoginPage() {
   const { t } = useTranslation();
@@ -257,20 +258,26 @@ export default function LoginPage() {
         <div style={{
           position: 'absolute', top: '-20%', left: '60%',
           width: 600, height: 600, borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(0,102,61,0.09) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(134,82,31,0.09) 0%, transparent 70%)',
         }} />
         <div style={{
           position: 'absolute', bottom: '-10%', left: '-10%',
           width: 400, height: 400, borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(246,187,24,0.10) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(214,160,106,0.12) 0%, transparent 70%)',
         }} />
       </div>
 
       <div style={{ position: 'relative', zIndex: 1, width: '100%', maxWidth: 380 }}>
         {/* Logo */}
         <div style={{ marginBottom: 40, textAlign: 'center' }}>
-          <div style={{ display: 'inline-block', marginBottom: 8, background: '#ffffff', borderRadius: 12, padding: '10px 14px' }}>
-            <img src="/b2sa-logo.jpeg" alt="Back2School Africa" style={{ width: 'min(100%, 310px)', height: 'auto' }} />
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, marginBottom: 12 }}>
+            <LogoMark size={72} />
+            <div style={{ color: 'var(--text-primary)', textAlign: 'left' }}>
+              <div style={{ fontSize: 25, fontWeight: 800, lineHeight: 1.05 }}>LSTA Mail</div>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', marginTop: 6 }}>
+                Limpopo Scholar Transport Alliance
+              </div>
+            </div>
           </div>
           <p style={{ color: 'var(--text-tertiary)', fontSize: 14, margin: 0 }}>{t('login.tagline')}</p>
         </div>

@@ -1,22 +1,22 @@
-/* B2SA Mail default light theme over MailFlow's GTD tokens. */
+/* LSTA Mail default light theme over MailFlow's GTD tokens. */
 :root[data-mailflow-theme="gtd"] {
   color-scheme: light;
 
   --bg-primary: #ffffff;
-  --bg-secondary: #f5f8f3;
-  --bg-tertiary: #eaf2e9;
+  --bg-secondary: #f8f3ec;
+  --bg-tertiary: #f1e8dd;
   --bg-elevated: #ffffff;
-  --bg-hover: #e1efe3;
+  --bg-hover: #ebddcd;
 
-  --border: #cbddce;
-  --border-subtle: #e0ebe1;
+  --border: #dccab4;
+  --border-subtle: #eadfcf;
 
-  --text-primary: #003b26;
-  --text-secondary: #456251;
-  --text-tertiary: #627c6b;
+  --text-primary: #17130f;
+  --text-secondary: #5e5143;
+  --text-tertiary: #786b5d;
 
-  --accent: #00663d;
-  --accent-hover: #005330;
-  --accent-dim: #e3f3e8;
+  --accent: #86521f;
+  --accent-hover: #6c4119;
+  --accent-dim: #f2e7d8;
   --accent-text: #ffffff;
 }

@@ -25,10 +25,10 @@ self.addEventListener('push', (event) => {
   }
 
   const {
-    title       = 'B2SA Mail',
+    title       = 'LSTA Mail',
     body        = 'New message',
-    icon        = '/b2sa-mark.jpeg',
-    badge       = '/b2sa-mark.jpeg',
+    icon        = '/lsta-icon-512.svg',
+    badge       = '/lsta-icon-512.svg',
     url         = '/',
     unreadCount,          // intentionally no default — undefined means "don't touch badge"
   } = data;

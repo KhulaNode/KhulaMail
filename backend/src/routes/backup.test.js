@@ -255,6 +255,6 @@ describe('POST /api/admin/backup/restore', () => {
       throw Object.assign(new Error('canceling statement due to lock timeout'), { code: '55P03' });
     });
     const res = await post('gz-bytes');
-    expect(await ndjson(res)).toEqual([{ error: 'Another connection kept B2SA Mail’s tables busy for 30 seconds. Nothing was changed; try again.' }]);
+    expect(await ndjson(res)).toEqual([{ error: 'Another connection kept LSTA Mail’s tables busy for 30 seconds. Nothing was changed; try again.' }]);
   });
 });
