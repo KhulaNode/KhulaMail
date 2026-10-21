@@ -257,12 +257,12 @@ export default function LoginPage() {
         <div style={{
           position: 'absolute', top: '-20%', left: '60%',
           width: 600, height: 600, borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(20,62,172,0.08) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(0,102,61,0.09) 0%, transparent 70%)',
         }} />
         <div style={{
           position: 'absolute', bottom: '-10%', left: '-10%',
           width: 400, height: 400, borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(255,210,28,0.07) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(246,187,24,0.10) 0%, transparent 70%)',
         }} />
       </div>
 
@@ -270,7 +270,7 @@ export default function LoginPage() {
         {/* Logo */}
         <div style={{ marginBottom: 40, textAlign: 'center' }}>
           <div style={{ display: 'inline-block', marginBottom: 8, background: '#ffffff', borderRadius: 12, padding: '10px 14px' }}>
-            <img src="/autolex-logo.png" alt="AutoLex" style={{ width: 'min(100%, 270px)', height: 'auto' }} />
+            <img src="/b2sa-logo.jpeg" alt="Back2School Africa" style={{ width: 'min(100%, 310px)', height: 'auto' }} />
           </div>
           <p style={{ color: 'var(--text-tertiary)', fontSize: 14, margin: 0 }}>{t('login.tagline')}</p>
         </div>

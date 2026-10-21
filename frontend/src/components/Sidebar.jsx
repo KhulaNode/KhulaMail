@@ -857,7 +857,7 @@ export default function Sidebar() {
                 color: 'var(--text-primary)',
                 letterSpacing: '-0.02em', whiteSpace: 'nowrap',
               }}>
-                AutoLex
+                B2SA Mail
               </span>
             </span>
           </div>

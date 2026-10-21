@@ -4505,8 +4505,8 @@ export class ImapManager {
               body: alertCount === 1
                 ? (latest.subject || '(no subject)')
                 : `${alertCount} new messages`,
-              icon: '/icon-512.png',
-              badge: '/badge-96.png',
+              icon: '/b2sa-mark.jpeg',
+              badge: '/b2sa-mark.jpeg',
               // Deep-link the notification to the latest message (the notification's
               // tag collapses arrivals into one card representing `latest`). Guarded:
               // fall back to the inbox if the id is somehow absent.

@@ -1,8 +1,10 @@
-# KhulaMail
+# B2SA Mail
 
-KhulaNode's self-hosted webmail, based on [MailFlow](https://github.com/maathimself/mailflow).
-Includes KhulaNode branding, a Foundermail IMAP/SMTP preset, and light-background
-GTD styling matching the working local installation.
+Back2School Africa's webmail edition of KhulaMail, based on
+[MailFlow](https://github.com/maathimself/mailflow). It includes the B2SA logos,
+green and gold palette, and client-facing mail identity.
+
+- [B2SA branding and mail setup](docs/B2SA.md).
 
 - [Deploy with Dokploy](DOKPLOY.md) using `docker-compose.dokploy.yml`.
 - [Local installation notes](LOCAL-SETUP.md).

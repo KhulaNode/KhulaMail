@@ -25,10 +25,10 @@ self.addEventListener('push', (event) => {
   }
 
   const {
-    title       = 'AutoLex Mail',
+    title       = 'B2SA Mail',
     body        = 'New message',
-    icon        = '/icon-512.png',
-    badge       = '/badge-96.png',
+    icon        = '/b2sa-mark.jpeg',
+    badge       = '/b2sa-mark.jpeg',
     url         = '/',
     unreadCount,          // intentionally no default — undefined means "don't touch badge"
   } = data;

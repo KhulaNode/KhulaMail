@@ -5,7 +5,7 @@
 
 export const FONT_SETS = {
   default: {
-    label: 'AutoLex Default',
+    label: 'B2SA Mail Default',
     description: 'DM Sans × Fraunces — refined and contemporary',
     preview: { heading: 'Fraunces', body: 'DM Sans', mono: 'JetBrains Mono' },
     vars: {

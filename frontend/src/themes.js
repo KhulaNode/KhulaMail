@@ -1,25 +1,25 @@
-import { AUTOLEX_MARK } from './utils/autolexBrand.js';
+import { B2SA_MARK } from './utils/b2saBrand.js';
 
 export const THEMES = {
   system: {
     label: 'System',
     description: 'Match OS light/dark setting',
-    preview: ['#081c38', '#f0f0f5', '#ffd21c', '#143eac'],
+    preview: ['#003b26', '#f2f7f1', '#f6bb18', '#00663d'],
     vars: {
-      '--bg-primary': '#081c38',
-      '--bg-secondary': '#0e2749',
-      '--bg-tertiary': '#143158',
-      '--bg-elevated': '#183963',
-      '--bg-hover': '#1d406b',
-      '--border': '#345070',
-      '--border-subtle': '#234263',
-      '--text-primary': '#f2f5fc',
-      '--text-secondary': '#becbe0',
-      '--text-tertiary': '#a5b7d0',
-      '--accent': '#ffd21c',
-      '--accent-text': '#081c38',
-      '--accent-dim': '#514923',
-      '--accent-glow': 'rgba(255,210,28,0.15)',
+      '--bg-primary': '#003b26',
+      '--bg-secondary': '#06472e',
+      '--bg-tertiary': '#0b5236',
+      '--bg-elevated': '#105c3d',
+      '--bg-hover': '#176646',
+      '--border': '#3b7158',
+      '--border-subtle': '#225c42',
+      '--text-primary': '#f4faf5',
+      '--text-secondary': '#c5dec9',
+      '--text-tertiary': '#a8c9b0',
+      '--accent': '#f6bb18',
+      '--accent-text': '#003b26',
+      '--accent-dim': '#594c19',
+      '--accent-glow': 'rgba(246,187,24,0.15)',
       '--green': '#4ade80',
       '--red': '#f87171',
       '--amber': '#fbbf24',
@@ -28,23 +28,23 @@ export const THEMES = {
 
   dark: {
     label: 'Dark',
-    description: 'AutoLex dark theme',
-    preview: ['#081c38', '#0e2749', '#ffd21c', '#e8e8ed'],
+    description: 'B2SA Mail dark theme',
+    preview: ['#003b26', '#06472e', '#f6bb18', '#e8e8ed'],
     vars: {
-      '--bg-primary': '#081c38',
-      '--bg-secondary': '#0e2749',
-      '--bg-tertiary': '#143158',
-      '--bg-elevated': '#183963',
-      '--bg-hover': '#1d406b',
-      '--border': '#345070',
-      '--border-subtle': '#234263',
-      '--text-primary': '#f2f5fc',
-      '--text-secondary': '#becbe0',
-      '--text-tertiary': '#a5b7d0',
-      '--accent': '#ffd21c',
-      '--accent-text': '#081c38',
-      '--accent-dim': '#514923',
-      '--accent-glow': 'rgba(255,210,28,0.15)',
+      '--bg-primary': '#003b26',
+      '--bg-secondary': '#06472e',
+      '--bg-tertiary': '#0b5236',
+      '--bg-elevated': '#105c3d',
+      '--bg-hover': '#176646',
+      '--border': '#3b7158',
+      '--border-subtle': '#225c42',
+      '--text-primary': '#f4faf5',
+      '--text-secondary': '#c5dec9',
+      '--text-tertiary': '#a8c9b0',
+      '--accent': '#f6bb18',
+      '--accent-text': '#003b26',
+      '--accent-dim': '#594c19',
+      '--accent-glow': 'rgba(246,187,24,0.15)',
       '--green': '#4ade80',
       '--red': '#f87171',
       '--amber': '#fbbf24',
@@ -54,22 +54,22 @@ export const THEMES = {
   light: {
     label: 'Light',
     description: 'Clean light theme',
-    preview: ['#f8f8fc', '#ffffff', '#143eac', '#081c38'],
+    preview: ['#f2f7f1', '#ffffff', '#00663d', '#003b26'],
     vars: {
-      '--bg-primary': '#f0f0f5',
+      '--bg-primary': '#f2f7f1',
       '--bg-secondary': '#ffffff',
-      '--bg-tertiary': '#f5f5fa',
+      '--bg-tertiary': '#f6f9f4',
       '--bg-elevated': '#ffffff',
-      '--bg-hover': '#ebebf5',
-      '--border': '#d8d8e8',
-      '--border-subtle': '#e8e8f0',
-      '--text-primary': '#081c38',
-      '--text-secondary': '#4a4a6a',
-      '--text-tertiary': '#8888aa',
-      '--accent': '#143eac',
+      '--bg-hover': '#e9f2e8',
+      '--border': '#cedfd1',
+      '--border-subtle': '#e3eee5',
+      '--text-primary': '#003b26',
+      '--text-secondary': '#416452',
+      '--text-tertiary': '#647e6d',
+      '--accent': '#00663d',
       '--accent-text': '#ffffff',
-      '--accent-dim': '#e7edfb',
-      '--accent-glow': 'rgba(20,62,172,0.12)',
+      '--accent-dim': '#e3f3e8',
+      '--accent-glow': 'rgba(0,102,61,0.12)',
       '--green': '#16a34a',
       '--red': '#dc2626',
       '--amber': '#d97706',
@@ -78,23 +78,23 @@ export const THEMES = {
 
   gtd: {
     label: 'GTD',
-    description: 'Getting Things Done — AutoLex light surfaces',
-    preview: ['#ffffff', '#f7f8fa', '#143eac', '#081c38'],
+    description: 'Getting Things Done — B2SA Mail light surfaces',
+    preview: ['#ffffff', '#f5f8f3', '#00663d', '#003b26'],
     vars: {
       '--bg-primary': '#ffffff',
-      '--bg-secondary': '#f7f8fa',
-      '--bg-tertiary': '#eef1f5',
+      '--bg-secondary': '#f5f8f3',
+      '--bg-tertiary': '#eaf2e9',
       '--bg-elevated': '#ffffff',
-      '--bg-hover': '#e8edf3',
-      '--border': '#d4dae3',
-      '--border-subtle': '#e6eaf0',
-      '--text-primary': '#081c38',
-      '--text-secondary': '#4b5563',
-      '--text-tertiary': '#687586',
-      '--accent': '#143eac',
+      '--bg-hover': '#e1efe3',
+      '--border': '#cbddce',
+      '--border-subtle': '#e0ebe1',
+      '--text-primary': '#003b26',
+      '--text-secondary': '#456251',
+      '--text-tertiary': '#627c6b',
+      '--accent': '#00663d',
       '--accent-text': '#ffffff',
-      '--accent-dim': '#e7edfb',
-      '--accent-glow': 'rgba(20,62,172,0.15)',
+      '--accent-dim': '#e3f3e8',
+      '--accent-glow': 'rgba(0,102,61,0.15)',
       '--green': '#2FBD85',
       '--red': '#E56A6A',
       '--amber': '#D9B430',
@@ -619,7 +619,7 @@ export function buildFaviconSvg(count = 0) {
   }
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <image href="${AUTOLEX_MARK}" width="32" height="32"/>
+  <image href="${B2SA_MARK}" width="32" height="32"/>
   ${badge}
 </svg>`;
 }
@@ -702,7 +702,7 @@ export function resolveEffectiveTheme(themeName) {
 }
 
 // The theme to use before any stored/server preference is known — i.e. on the
-// login screen and the very first visit. AutoLex defaults to its light-styled GTD.
+// login screen and the very first visit. B2SA Mail defaults to its light-styled GTD.
 export function getInitialTheme() {
   return 'gtd';
 }
@@ -801,7 +801,7 @@ let _badgeCount  = 0;
 let _renderSeq   = 0;
 let _appliedSeq  = 0;
 
-// Cached rasterization of the base favicon (AutoLex mark, no badge).
+// Cached rasterization of the base favicon (B2SA mark, no badge).
 // Once populated, badge updates are drawn synchronously with Canvas 2D —
 // no SVG → Image → onload round-trip needed.
 let _baseCanvas = null;

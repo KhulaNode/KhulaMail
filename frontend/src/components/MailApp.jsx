@@ -463,7 +463,7 @@ export default function MailApp() {
     const tabCount = selectedAccountId
       ? (unreadCounts.byAccount[selectedAccountId] ?? 0)
       : total;
-    document.title = 'AutoLex Mail';
+    document.title = 'B2SA Mail';
     updateFaviconBadge(showFaviconBadge ? tabCount : 0);
     // App-icon badge always reflects total unread across all accounts so that
     // selecting a zero-unread account never clears the home screen badge.

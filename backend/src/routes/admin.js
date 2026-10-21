@@ -435,7 +435,7 @@ router.post('/invites', async (req, res) => {
             auth: { user: cfg.user, pass },
             tls: sysTls,
           });
-          fromHeader = `${cfg.fromName || 'AutoLex'} <${cfg.fromEmail || cfg.user}>`;
+          fromHeader = `${cfg.fromName || 'B2SA Mail'} <${cfg.fromEmail || cfg.user}>`;
         }
       } catch { /* fall through to personal account */ }
     }
@@ -480,9 +480,9 @@ router.post('/invites', async (req, res) => {
       await transport.sendMail({
         from: fromHeader,
         to: email,
-        subject: 'You\'ve been invited to AutoLex',
+        subject: 'You\'ve been invited to B2SA Mail',
         text: [
-          `You've been invited to join AutoLex.`,
+          `You've been invited to join B2SA Mail.`,
           ``,
           `Click the link below to create your account:`,
           `${inviteUrl}`,
@@ -492,13 +492,13 @@ router.post('/invites', async (req, res) => {
         html: `
           <div style="font-family: -apple-system, Arial, sans-serif; max-width: 480px; margin: 0 auto; padding: 32px; color: #1a1a1a;">
             <div style="margin-bottom: 24px;">
-              <span style="font-size: 22px; font-weight: 700; color: #1a1a1a;">AutoLex</span>
+              <span style="font-size: 22px; font-weight: 700; color: #1a1a1a;">B2SA Mail</span>
             </div>
             <h2 style="margin: 0 0 12px; font-size: 18px; font-weight: 600;">You've been invited</h2>
             <p style="color: #555; line-height: 1.6; margin: 0 0 24px;">
-              You've been invited to join AutoLex. Click the button below to create your account.
+              You've been invited to join B2SA Mail. Click the button below to create your account.
             </p>
-            <a href="${inviteUrl}" style="display: inline-block; padding: 12px 24px; background: #143eac; color: white; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 14px;">
+            <a href="${inviteUrl}" style="display: inline-block; padding: 12px 24px; background: #00663d; color: white; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 14px;">
               Accept Invite
             </a>
             <p style="color: #999; font-size: 12px; margin: 24px 0 0;">
@@ -573,7 +573,7 @@ router.post('/system-email', async (req, res) => {
     tls: tls || 'STARTTLS',
     user: user.trim(),
     pass: encryptedPass,
-    fromName: (fromName || '').trim() || 'AutoLex',
+    fromName: (fromName || '').trim() || 'B2SA Mail',
     fromEmail: (fromEmail || '').trim() || user.trim(),
   };
 

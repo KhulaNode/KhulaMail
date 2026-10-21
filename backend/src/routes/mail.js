@@ -562,7 +562,7 @@ router.get('/messages/:id/body', async (req, res) => {
     // that MailFlow is already backing off, instead of the raw server string.
     if (err.providerRefusing || isConnectionRefusal(msg)) {
       return res.status(503).json({
-        error: 'The mail server is limiting connections for this account. AutoLex is backing off and will retry automatically; please try again shortly.',
+        error: 'The mail server is limiting connections for this account. B2SA Mail is backing off and will retry automatically; please try again shortly.',
         providerLimited: true,
       });
     }
