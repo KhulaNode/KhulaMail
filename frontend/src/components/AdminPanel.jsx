@@ -7103,10 +7103,11 @@ function MailboxCleanupTab() {
   );
 }
 
+const HIDDEN_SETTINGS_TABS = new Set(['ai-actions', 'ai', 'integrations', 'plugins']);
+
 const TAB_GROUPS = [
   { id: 'mail', labelKey: 'admin.tabs.groupMail', tabIds: ['accounts', 'rules', 'categories', 'antispam', 'cleanup'] },
   { id: 'preferences', labelKey: 'admin.tabs.groupPreferences', tabIds: ['appearance', 'behavior', 'notifications', 'shortcuts', 'security'] },
-  { id: 'ai-extensions', labelKey: 'admin.tabs.groupAiExtensions', tabIds: ['ai-actions', 'ai', 'integrations', 'plugins'] },
   { id: 'admin', labelKey: 'admin.tabs.groupAdmin', tabIds: ['users', 'sso', 'backup'] },
 ];
 
@@ -8719,7 +8720,7 @@ export default function AdminPanel() {
   const { t } = useTranslation();
   const { setShowAdmin, adminTab, setAdminTab, user } = useStore();
   const isMobile = useMobile();
-  const visibleTabs = TABS.filter(tab => (!tab.adminOnly || user?.isAdmin) && (!tab.mobileHidden || !isMobile));
+  const visibleTabs = TABS.filter(tab => !HIDDEN_SETTINGS_TABS.has(tab.id) && (!tab.adminOnly || user?.isAdmin) && (!tab.mobileHidden || !isMobile));
 
   const tabScrollRef = useRef(null);
   const [tabRightOverflow, setTabRightOverflow] = useState(false);
@@ -8749,6 +8750,7 @@ export default function AdminPanel() {
   };
   const searchResults = searchQuery.trim()
     ? searchIndex.filter(item => {
+        if (HIDDEN_SETTINGS_TABS.has(item.tab)) return false;
         if (item.adminOnly && !user?.isAdmin) return false;
         if (item.mobileHidden && isMobile) return false;
         const q = searchQuery.toLowerCase();
