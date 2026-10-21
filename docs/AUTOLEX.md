@@ -37,7 +37,8 @@ this branding change.
 
 Dokploy deployment and desktop/Android packaging are outside this change's scope.
 Native app IDs, installers and native bridge identifiers retain their upstream
-values. Upstream source and sponsorship attribution remains in About.
+values. About links to the Autolex branch's source code and retains the licence
+information; the Support development section and donation links are omitted.
 
 Existing backup JSON markers, encryption checks, filenames, API/CSRF identifiers,
 local storage keys and SSO group values are preserved. Backup messages are branded
